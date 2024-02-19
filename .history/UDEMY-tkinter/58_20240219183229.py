@@ -24,6 +24,4 @@ check=ttk.Checkbutton(
     offvalue="off"
 )    
 
-check.pack()
-
 root.mainloop()

@@ -15,15 +15,6 @@ selected_option = tk.StringVar()
 def print_current_option():
     print(selected_option.get())
 
-check=ttk.Checkbutton(
-    root,
-    text="Check Example",
-    variable=selected_option,
-    command=print_current_option,
-    onvalue="on",
-    offvalue="off"
-)    
-
-check.pack()
+check=Checkbutton()    
 
 root.mainloop()
