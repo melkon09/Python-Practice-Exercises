@@ -13,7 +13,7 @@ root.title("Widget examples")
 selected_weekday=tk.StringVar()
 weekday=ttk.Combobox(root, textvariable=selected_weekday)
 weekday['values'] = ('Monday','Tuesday','Wednesday','Thursday','Friday')
-weekday['state']= 'readonly' # 'normal', the user cannot type their own value in the combobox
+weekday['state']= 'readonly' # 'normal'
 weekday.pack()
 
 
