@@ -2,7 +2,7 @@ import tkinter as tk
 
 # Function to show tooltips
 def show_tooltip(event, tooltip, tooltip_text):
-    tooltip.geometry(f"+{event.x +10}+{event.y + 10}") # adjust tooltip position
+    tooltip.geometry(f"+{event.x_parent - 10}+{event.y - 10}") # adjust tooltip position
     tooltip_label.config(text=tooltip_text)
     tooltip.deiconify()
 
