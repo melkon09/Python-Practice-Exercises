@@ -1,0 +1,13 @@
+import math
+
+class Shape():
+    def calculate_area(self):
+        pass
+
+    def calculate_perimeter(self):
+        pass
+
+class Circle(Shape):
+    def __init__(self, radius):
+        self.radius=radius
+            
