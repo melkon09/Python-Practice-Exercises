@@ -1,6 +1,6 @@
 import tkinter as tk
 from tkinter import ttk
-
+from scicalc_functions import *
 
 root=tk.Tk()
 root.title('Scientific Calculator')
@@ -13,7 +13,6 @@ frame.grid()
 display=tk.Entry(frame,font=('Helvetica',20,'bold'), bg='lightgreen', fg='black', width=20, justify='right', bd=5)
 display.grid(padx=5, pady=5, sticky="NEW")
 display.grid_configure(columnspan=5)
-display.insert(0, "0")
 
 tags_func=[ 'rad','deg','M+'       ,'MR'       ,'MC' ,
             'x^y', 'PH','sin'      ,'cos'      ,'tan',

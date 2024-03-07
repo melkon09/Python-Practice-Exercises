@@ -1,6 +1,6 @@
 import tkinter as tk
 from tkinter import ttk
-
+from scicalc_functions import *
 
 root=tk.Tk()
 root.title('Scientific Calculator')
@@ -13,7 +13,6 @@ frame.grid()
 display=tk.Entry(frame,font=('Helvetica',20,'bold'), bg='lightgreen', fg='black', width=20, justify='right', bd=5)
 display.grid(padx=5, pady=5, sticky="NEW")
 display.grid_configure(columnspan=5)
-display.insert(0, "0")
 
 tags_func=[ 'rad','deg','M+'       ,'MR'       ,'MC' ,
             'x^y', 'PH','sin'      ,'cos'      ,'tan',
@@ -29,6 +28,12 @@ functions_1=['', '', '', '', '',
             '', '', '', '', ''
 ]
 
+functions_2=['', '', '', '', 'all_clear',
+            '', '', '', '', '',
+            '', '', '', '', '',
+            '', '', '', '', '',]
+
+
 
 
 
@@ -37,11 +42,6 @@ tags_simple=['7', '8', '9', 'C', 'AC',
              '1', '2', '3', '+', '-',
              '0', ',', '+/-', '='
 ]
-
-functions_2=['', '', '', '', 'all_clear',
-            '', '', '', '', '',
-            '', '', '', '', '',
-            '', '', '', '', '',]
 
 i=0
 button_list=[]
@@ -59,7 +59,7 @@ i=0
 for ro in range(6,10):
     for col in range(0,5):
         if tags_simple[i]=='C' or tags_simple[i]=='AC':
-            button_list.append(tk.Button(frame, width=5, height=2, bg='red', fg='white', font=('Helvetica', 12, 'bold'), bd=2, text=tags_simple[i],command=functions_2[i]))
+            button_list.append(tk.Button(frame, width=5, height=2, bg='red', fg='white', font=('Helvetica', 12, 'bold'), bd=2, text=tags_simple[i],command=))
             button_list[i+25].grid(row=ro, column=col, pady=5)
         elif tags_simple[i]=='=':
             button_list.append(tk.Button(frame, width=5, height=2, bg='lightblue', fg='white', font=('Helvetica', 12, 'bold'), bd=2, text=tags_simple[i]))

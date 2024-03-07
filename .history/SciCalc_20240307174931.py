@@ -1,6 +1,6 @@
 import tkinter as tk
 from tkinter import ttk
-
+from scicalc_functions import *
 
 root=tk.Tk()
 root.title('Scientific Calculator')
