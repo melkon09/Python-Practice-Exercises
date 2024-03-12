@@ -16,9 +16,9 @@ display.grid_configure(columnspan=5)
 display.insert(0, "0")
 
 tags_func=[ 'rad','deg','M+'       ,'MR'       ,'MC' ,
-            'x^y', 'PH','sin'      ,'cos'      ,'tan',
+            'x^y', 'e','sin'      ,'cos'      ,'tan',
             'log','ln' ,'arc\nsin' ,'arc\ncos' ,'arc\ntan',
-            '1/x','n!' ,'sinh'     ,'cosh'     ,'tanh',   
+            '1/x','n!' ,'sinh'     ,'cosh'     ,'tanh',    
             'n√x','2√x','arc\nsinh','arc\ncosh','arc\ntanh'
                ]
 
@@ -28,9 +28,6 @@ functions_1=['', '', '', '', '',
             '', '', '', '', '',
             '', '', '', '', ''
 ]
-
-
-
 
 tags_simple=['7', '8', '9', 'C', 'AC',
              '4', '5', '6', 'x', '÷',
