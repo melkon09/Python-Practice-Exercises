@@ -125,7 +125,7 @@ tags_simple=['7', '8', '9', 'C', 'AC',
 
 functions_2=[   num_7, num_8, num_9, '', all_clear,
                 num_4, num_5, num_6, '', '',
-                num_1, num_2, num_3, '', '',
+                num_1, num_2, num_3, addition, '',
                 num_0, comma, '', '', '',]
 
 i=0
@@ -156,7 +156,7 @@ for ro in range(6,10):
         i+=1
 
 for child in frame.winfo_children():
-    child.grid_configure(sticky='NSEW')
+    child.grid_configure(sticky='')
 
 root.bind('0', num_0)
 root.bind('1', num_1)

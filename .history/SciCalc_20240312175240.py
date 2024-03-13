@@ -2,99 +2,107 @@ import tkinter as tk
 from tkinter import ttk
 import math
 
-root=tk.Tk()
-root.title('Scientific Calculator')
-root.geometry("330x620")
-
-frame=tk.Frame(root)
-frame.grid()
-
-result=0
-
-def all_clear():
-    display.delete(0, 'end')
-    display.insert(0, '0')
-
 def square_root():
     result = math.sqrt(float(display.get()))
     display.delete(0, 'end')
     display.insert(0,result)
 
-
-def num_1(*args):
+def num_1():
     if display.get()=='0':
         display.delete(0, 'end')
-        display.insert('end','1')
+        display.insert(0,'1')
     else:
-        display.insert('end','1')    
+        display.insert(0,'1')    
 
-def num_2(*args):
+def num_2():
     if display.get()=='0':
         display.delete(0, 'end')
-        display.insert('end','2')
+        display.insert(0,'2')
     else:
-        display.insert('end','2')
+        display.insert(0,'2')
 
-def num_3(*args):
+def num_3():
     if display.get()=='0':
         display.delete(0, 'end')
-        display.insert('end','3')
+        display.insert(0,'3')
     else:
-        display.insert('end','3')
+        display.insert(0,'3')
 
-def num_4(*args):
+def num_4():
     if display.get()=='0':
         display.delete(0, 'end')
-        display.insert('end','4')
+        display.insert(0,'4')
     else:
-        display.insert('end','4')
+        display.insert(0,'4')
 
-def num_5(*args):
+def num_5():
     if display.get()=='0':
         display.delete(0, 'end')
-        display.insert('end','5')
+        display.insert(0,'5')
     else:
-        display.insert('end','5')
+        display.insert(0,'5')
 
-def num_6(*args):
+def num_6():
     if display.get()=='0':
         display.delete(0, 'end')
-        display.insert('end','6')
+        display.insert(0,'6')
     else:
-        display.insert('end','6')
+        display.insert(0,'6')
 
-def num_7(*args):
+def num_7():
     if display.get()=='0':
         display.delete(0, 'end')
-        display.insert('end','7')
+        display.insert(0,'7')
     else:
-        display.insert('end','7')
+        display.insert(0,'7')
 
-def num_8(*args):
+def num_8():
     if display.get()=='0':
         display.delete(0, 'end')
-        display.insert('end','8')
+        display.insert(0,'8')
     else:
-        display.insert('end','8')
+        display.insert(0,'8')
 
-def num_9(*args):
+def num_9():
     if display.get()=='0':
         display.delete(0, 'end')
-        display.insert('end','9')
+        display.insert(0,'9')
     else:
-        display.insert('end','9')
+        display.insert(0,'9')
 
-def num_0(*args):
+def num_0():
     if display.get()=='0':
         pass
     else:
-        display.insert('end','0')
-
-def comma(*args):
-        display.insert('end','.')
+        display.insert(0,'1')
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+root=tk.Tk()
+root.title('Scientific Calculator')
+root.geometry("330x620")
+root.resizable(False, False)
+
+frame=tk.Frame(root)
+frame.grid()
 
 display=tk.Entry(frame,font=('Helvetica',20,'bold'), bg='lightgreen', fg='black', width=20, justify='right', bd=5)
 display.grid(padx=5, pady=5, sticky="NEW")
@@ -120,13 +128,13 @@ functions_1=['', '', '', '', '',
 tags_simple=['7', '8', '9', 'C', 'AC',
              '4', '5', '6', 'x', '÷',
              '1', '2', '3', '+', '-',
-             '0', ',', chr(177), '='
+             '0', ',', '+/-', '='
 ]
 
-functions_2=[   num_7, num_8, num_9, '', all_clear,
-                num_4, num_5, num_6, '', '',
-                num_1, num_2, num_3, '', '',
-                num_0, comma, '', '', '',]
+functions_2=[ num_7, num_8, num_9, '', 'all_clear',
+            num_4, num_5, num_6, '', '',
+            num_1, num_2, num_3, '', '',
+            num_0, '', '', '', '',]
 
 i=0
 button_list=[]
@@ -155,20 +163,7 @@ for ro in range(6,10):
             button_list[i+25].grid(row=ro, column=col, pady=5)
         i+=1
 
-for child in frame.winfo_children():
-    child.grid_configure(sticky='NSEW')
 
-root.bind('0', num_0)
-root.bind('1', num_1)
-root.bind('2', num_2)
-root.bind('3', num_3)
-root.bind('4', num_4)
-root.bind('5', num_5)
-root.bind('6', num_6)
-root.bind('7', num_7)
-root.bind('8', num_8)
-root.bind('9', num_9)
-root.bind('.', comma)
 
 
 root.mainloop()

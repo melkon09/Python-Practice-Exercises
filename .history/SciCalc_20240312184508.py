@@ -2,15 +2,6 @@ import tkinter as tk
 from tkinter import ttk
 import math
 
-root=tk.Tk()
-root.title('Scientific Calculator')
-root.geometry("330x620")
-
-frame=tk.Frame(root)
-frame.grid()
-
-result=0
-
 def all_clear():
     display.delete(0, 'end')
     display.insert(0, '0')
@@ -20,6 +11,10 @@ def square_root():
     display.delete(0, 'end')
     display.insert(0,result)
 
+def simple_ops():
+    if 
+    value=float(display.get())
+    result+=
 
 def num_1(*args):
     if display.get()=='0':
@@ -96,6 +91,17 @@ def comma(*args):
 
 
 
+
+
+
+root=tk.Tk()
+root.title('Scientific Calculator')
+root.geometry("330x620")
+root.resizable(False, False)
+
+frame=tk.Frame(root)
+frame.grid()
+
 display=tk.Entry(frame,font=('Helvetica',20,'bold'), bg='lightgreen', fg='black', width=20, justify='right', bd=5)
 display.grid(padx=5, pady=5, sticky="NEW")
 display.grid_configure(columnspan=5)
@@ -154,9 +160,6 @@ for ro in range(6,10):
             button_list.append(tk.Button(frame, width=5, height=2, bg='lightgrey', fg='white', font=('Helvetica', 12, 'bold'), bd=2, text=tags_simple[i],command=functions_2[i]))
             button_list[i+25].grid(row=ro, column=col, pady=5)
         i+=1
-
-for child in frame.winfo_children():
-    child.grid_configure(sticky='NSEW')
 
 root.bind('0', num_0)
 root.bind('1', num_1)

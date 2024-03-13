@@ -125,7 +125,7 @@ tags_simple=['7', '8', '9', 'C', 'AC',
 
 functions_2=[   num_7, num_8, num_9, '', all_clear,
                 num_4, num_5, num_6, '', '',
-                num_1, num_2, num_3, '', '',
+                num_1, num_2, num_3, addition, '',
                 num_0, comma, '', '', '',]
 
 i=0

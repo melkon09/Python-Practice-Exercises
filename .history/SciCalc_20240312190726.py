@@ -7,7 +7,7 @@ root.title('Scientific Calculator')
 root.geometry("330x620")
 
 frame=tk.Frame(root)
-frame.grid()
+frame.grid(sticky='NSEW')
 
 result=0
 
