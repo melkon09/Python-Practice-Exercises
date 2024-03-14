@@ -20,7 +20,9 @@ class SciCalc():
         if self.operation=='addition':
             self.total += float(display.get())
         elif self.operation=='':
-            self.total=float(display.get())    
+            self.total=    
+
+
 
     def equal(self):
         self.opSelect()

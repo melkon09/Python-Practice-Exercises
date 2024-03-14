@@ -22,6 +22,8 @@ class SciCalc():
         elif self.operation=='':
             self.total=float(display.get())    
 
+
+
     def equal(self):
         self.opSelect()
         display.delete(0, 'end')
