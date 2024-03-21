@@ -1,0 +1,16 @@
+class Employee():
+    def __init__(self, emp_id, emp_name, emp_salary, emp_department):
+        self.emp_id=emp_id
+        self.emp_name=emp_name
+        self.emp_salary=emp_salary
+        self.emp_department=emp_department
+
+    def calculate_emp_salary(self):
+        pass
+
+    def emp_assign_department(self):
+        pass
+
+    def print_emp_details(self):
+        print('Employee ID: ',self.emp_id)
+        print('Employee')
